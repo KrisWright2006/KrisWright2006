@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #car {
+      background-color: blueviolet;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      text-align: center;
+    }
+
+    #car2 {
+      background-color: rgb(183, 0, 255);
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      bottom: 250px;
+      text-align: center;
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Super Queer Kart</title>
+</head>
+
+<body>
+  <img id="car" src="mario commits vehicular manslaughter.jpg"> </img>
+  <img id="car2" src="transgenr.jpg"> </img>
+</body>
+<script>
+  var x = 10
+  var b = 10
+  document.getElementById("car").style.left = x + "px"
+  document.addEventListener("keydown", keyHandler)
+  function keyHandler(e) {
+    document.getElementById("car2").style.left = b + "px"
+    document.getElementById("car").style.left = x + "px"
+    if (e.key === "q") {
+      console.log(e.key)
+      b = b + 10
+    }
+    if (e.key === "h") {
+      console.log(e.key)
+      x = x + 10
+    }
+  }
+
+
+</script>

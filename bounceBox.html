@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  #box {
+    background-color: blueviolet;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+  } </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>TrainingHobbyLazer is BALLIN</title>
+</head>
+
+<body>
+  <img id="box" src="vootubers.jpg">
+</body>
+<script>
+  var x = 100
+  var y = 100
+  var speed = 10
+  var upSpeed = 10
+  document.getElementById("box").addEventListener("click",speedIncrease,)
+  document.getElementById("box").style.left = x + "px"
+  document.getElementById("box").style.top = y + "px"
+  setInterval(moveBox,50)
+  function moveBox(){
+    x = x + speed
+    y = y + upSpeed
+    document.getElementById("box").style.left=x + "px"
+    if (x >= 1300) {
+      speed = speed * -1
+  }
+    if (x <= 0) {
+      speed = speed * -1
+  }
+  document.getElementById("box").style.top = y + "px"
+  if (y >= 600) {
+      upSpeed = upSpeed * -1
+  }
+  if (y <= 0) {
+      upSpeed = upSpeed * -1
+    }
+  }
+  function speedIncrease(){
+    speed = speed * 2
+    upSpeed = upSpeed * 2
+  }
+</script>
+</html>

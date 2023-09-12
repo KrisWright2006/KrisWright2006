@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #box {
+      background-color: blueviolet;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      text-align: center;
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>the VOOBERS are plentiful</title>
+</head>
+
+<body>
+  <img hidden id="image" src="vootubers.jpg">
+  <canvas id="canvas" height="1000" width="1000"></canvas>
+</body>
+<script>
+  var x = [85, 61, 8, 62, 60, 9, 70, 91, 10, 58]
+  var y = [85, 61, 8, 62, 60, 9, 70, 91, 10, 58]
+  var speed = [5, 10, 15, 20, 25, 5, 3, 4, 17, 250]
+  var upSpeed = [ 10, 15, 20, 25, 5, 3, 4, 17, 250,7]
+  var image = document.getElementById("image")
+  var canvas = document.getElementById("canvas")
+  var ctx = canvas.getContext("2d")
+
+  setInterval(moveBox, 15)
+  function moveBox() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    for (var i = 0; i < 10; i = i + 1) {
+      x[i] = x[i] + speed[i]
+      y[i] = y[i] + upSpeed[i]
+      ctx.drawImage(image, x[i], y[i], 100, 100)
+
+      if (x[i] >= 873) {
+        speed[i] = speed[i] * -1
+      }
+      if (x[i] <= 0) {
+        speed[i] = speed[i] * -1
+      }
+      if (y[i] >= 659) {
+        upSpeed[i] = upSpeed[i] * -1
+      }
+      if (y[i] <= 0) {
+        upSpeed[i] = upSpeed[i] * -1
+      }
+    }
+  }
+  function speedIncrease() {
+    speed = speed[i] * 2
+    upSpeed = upSpeed[i] * 2
+  }
+</script>
+
+</html>

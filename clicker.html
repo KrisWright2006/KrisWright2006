@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>THE GREAT PAPYRUS' COOL AND EPIC GAME CLICKER</title>
+  <style>
+    img{
+        width:75%;
+    }
+
+  </style>
+</head>
+<body>
+  <button id="duck">AMONGULA BUTTON</button>
+  <button id="upgrade5">AMONGULA BUTTON 2</button>
+<img id="duck" src="papyro.jpg">
+<p id="number">0 AMONGULAS</p>
+</body>
+</html>
+<script>
+  var score=0
+  var clickMultiplier=1
+  document.getElementById("upgrade5").addEventListener("click",multiUpgrade,)
+document.getElementById("duck").addEventListener("click",clickHandler)
+document.getElementById("upgrade").addEventListener("click",upgrade)
+function clickHandler(){
+   document.getElementById("number").innerText=score+" AMONGULAS"
+score=score+clickMultiplier
+}
+
+function autoClicker(){
+setInterval(clickHandler, 1000)
+
+}
+
+function multiUpgrade(){
+  score=score-5
+  clickMultiplier=clickMultiplier+1
+}
+
+</script>
